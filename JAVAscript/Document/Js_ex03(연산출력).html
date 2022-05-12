@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.write(3+4,"<br>")
+        // 정수+정수 연산되기에 문제없다
+
+        document.write(3+4.2,"<br>")
+        // 정수+실수이기에 문제생김
+        // 자료형이 다르면, 데이터가 저장되는 공간이 다르며
+        // 제대로된 연산이 안되어야 하는 대, 연산이 된다
+        // 정수가 저장되는 공간과 실수가 저장되는 공간이
+        // 내부구조가 완전히 달라서 안되어야 되는 대
+        // JavaScript에서 장동형변환으로 연산이 진행된다 
+        // 정수+실수가 문제상황을 피연산자의 불일치..
+        // 연산자 : +, 피연산자 : 3,4.2
+        // 피연산자의 데이터타입 불일치
+        // 정수와 실수가 연산을 하면 실수가 우선시한다
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
