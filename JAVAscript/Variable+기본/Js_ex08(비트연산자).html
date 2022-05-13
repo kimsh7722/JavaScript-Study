@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 비트 연산자
+        // 비트 - bit
+        // &(AND), |(OR), ^(XOR), ~(NOT), / 비트 이동 <<, >>
+        // 0000 0000 0000 0000
+        // 비트는 이진데이터 한개
+        // 비트 - 바이트 - 워드...
+        // 바이트 - 8비트
+        // int age=20; - C/C++
+        // var age=20; - JavaScript
+        // int는 4바이트 - 32비트
+        // double 8바이트 - 64비트
+        // double height=172.5; - C/C++
+        // var height=172.5; - JavaScript
+
+        // 2진수 : 0000 0000 0000 0000 (1,2,4,8,16,32,64,128)
+        //  └ 2를 곱하여 비트를 계산, 2로나눠서 비트로 계산
+        // 10진수 : 1,2,3,4,5,6,7,8... - 정수
+        // 8진수 : 1,2,3,4,5,6,7,10,11,12,13,14,15,16,17,20...
+        //  └ 10 -> 1x8+0x8
+        // 16진수 : 1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,10,11,~19,1A,1B
+        // 오랜만에 네트워크 호스트 주소 함봅시다 
+        // A : 1~127, B : 129~191, C : 192~223, D 224~239, E 240~255
+
+        var num1=5; var num2=2;
+        // int num1=5; - 4바이트 정수 - 32비트
+        // 00000000 00000101 -> 5
+        // 00000000 00000010 -> 2
+
+        // 비트 AND - & - 같은 비트 자리끼리 AND연산
+        var result = (num1&num2);
+        document.write(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

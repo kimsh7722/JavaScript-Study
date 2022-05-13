@@ -13,24 +13,47 @@
         // == : 같다 , != : 같지안다
         // 물어보고 결과가 참이면 true가 반환되고,
         // 물어보고 결과가 거짓이면 false가 반환된다.
-        var num1=9;
-        var num2=2;
+        // var num1=9;
+        // var num2=2;
         // var result=(num1>=num2);
         // 대입연산자 나오면 오른쪽부터 시작
         // 오른쪽가서 보니까 관계연산자가 있다
         // num1이 num2이상? -> 결과는 참이다
         // true가 반환, var result=true;
         
-        // var result=(num1<=num2);
-        // num1이 num2를 비교햇을 때 값은? 거짓
+        // var result1=(num1<=num2);
+        // num1이 num2를 비교했을 때 값은? 거짓
         
-        // var result=(num1>num2);
-        // num1이 num2를 비교햇을 때 값은? 진실
+        // var result2=(num1>num2);
+        // num1이 num2를 비교했을 때 값은? 진실
 
-        var result=(num1==num2);
-        // var result=(num1!=num2);
-        
-        document.write(result);
+        // var result3=(num1==num2);
+        // num1이 num2를 비교했을 때 값은? 거짓
+
+        // var result4=(num1!=num2);
+        // num1이 num2를 비교했을 때 값은? 진실
+        // document.write(result1,"<br>");
+        // document.write(result2,"<br>");
+        // document.write(result3,"<br>");
+        // document.write(result4,"<br>");
+        // result=(num1===num2);
+        // document.write(result,"<br>");
+        // === : the strict equality operator
+        // !== : 엄격하게 다른가? (데이터타입까지)
+        var num1=9;
+        var num2='9';
+        var result = (num1!=num2);
+        document.write(result,"<br>");
+        result = (num1!==num2);
+        document.write(result,"<br>");
+
+        // 기존의 변수가 존재하나 값이 다르면 새로운값으로 초기화시킨다
+        // var num1=9;
+        // var num2=2;
+        // var result=(num1==num2);
+        // document.write(result,"<br>");
+        // result=(num1!=num2);
+        // document.write(result,"<br>");
     </script>
 </head>
 <body>
