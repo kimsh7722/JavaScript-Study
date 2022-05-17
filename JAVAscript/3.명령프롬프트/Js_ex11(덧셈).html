@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // prompt로 덧셈
+        var num1=prompt("1 입력");
+        // prompt에 받은 정수는 문자열로 취급한다
+        // num1=parseInt(num1); // 문자열을 정수로 변환
+        // num1=Number(num1);
+        num1=Number("3.3");
+
+        var num2=prompt("2 입력");
+        // num2=parseInt(num2);
+        // num2=parseFloat(num2); // 문자열을 실수로 변환
+        num2=Number(num2);
+        num2=Number("4");
+
+        var result=(num1+num2);
+        document.write(result,"<br>");
+        
+        result=(num1-num2);
+        document.write(result,"<br>");
+        // 정리
+        // parseInt : 정수 변환
+        // parseFloat : 실수 변환
+        // Number : 정수든 실수든 전부처리 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // << : 비트 왼쪽이동 연산자
+        // num << 1 : num의 비트를 왼쪽으로 1칸 이동
+        var num = 10;
+        var result = (num << 1);
+        document.write(result,"<br>");
+        // 비트 풀이
+        // 00000000 00000000 00000000 00001010 = 10
+        // num << 1 이동
+        // 00000000 00000000 00000000 00010100 = 20
+
+        // >> : 비트 오른쪽 이동 연산자
+        num = 10;
+        result = (num >> 1);
+        document.write(result,"<br>");
+        // 비트 풀이
+        // 00000000 00000000 00000000 00001010 = 10
+        // num >> 1 이동
+        // 00000000 00000000 00000000 00000101 = 5
+        // num >> 1 더이동
+        num = 5;
+        result = (num >> 1);
+        document.write(result);
+        // 00000000 00000000 00000000 00000010 = 2
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
