@@ -14,14 +14,26 @@
         if(age>=20) {
             alert("성인");
             // 경고창
-            document.write("성인입니다");
+            document.write("성인입니다","<br>");
         }else {
             alert("미성년자");
-            document.write("미성년자입니다");
+            document.write("미성년자입니다","<br>");
         }
 
         // if : 만약 ~한다면
         // else : 이외의 나머지
+
+        var gender = prompt("성별 입력");
+        while(true) {
+
+            if(gender == "M") {
+                document.write("낭성","<br>");
+            }else if(gender == "F") {
+                document.write("여성","<br>");
+            }else {
+                alert("입력오류");
+            }
+        }
     </script>
 </head>
 <body>
