@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // if ~ else if~else
+        // 조건문 여러게 적용
+        var num=prompt("정수 입력");
+        num = parseInt(num);
+        // 변수에다가 정수변환을 적용시키고 다시 변수에다 대입
+        // parsing Integer, parse, parser
+        // parsing : 구문분석
+        // parse : 구문분석하다 
+        // parser : 구문분석기
+
+        if(num == 100) {
+            alert("A+")
+        }else if(100 > num && num >= 90){
+            // 100 >= num >= 90 - X
+            // 100 >= num && num >= 90 - O
+            alert("A");
+        }else if(90 > num && num >= 80) {
+            // 서로가 교차대도록 설정해야한다 그렇지안으면 작동을 못한다 레알 해바서암
+            alert("B");
+        }else if(80 > num && num >= 70) {
+            alert("C");
+        }else if(70 > num && num >= 60) {
+            alert("D");
+        }else if(60 > num && num >= 50) {
+            alert("F");
+        }else {
+            alert("낙제");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
