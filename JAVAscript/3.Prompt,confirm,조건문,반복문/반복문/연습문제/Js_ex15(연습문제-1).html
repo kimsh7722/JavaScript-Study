@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 원하는 수를 입력하여 구구단으로 곱하여 짝수와 홀수의 총합 구하시오
+        var sum1=0;
+        var sum2=0;
+
+        var num1 = prompt("시작단 입력")
+        num1=parseInt(num1)
+        var num2 = prompt("끝 입력")
+        num2=parseInt(num2)
+
+        for(var dan=num1; dan<=num2; dan++) {
+
+            if(dan%2==0) {
+                for(var i=1; i<=9; i++) {
+                    document.write(dan+"X"+i+"="+dan*i+" 짝수입니다","<br>");
+                    sum1=sum1+dan;
+                }
+                document.write("짝수의 누적 합 : "+sum1,"<br>");
+            }else {
+                for(var i=1; i<=9; i++) {
+                    document.write(dan+"X"+i+"="+dan*i+" 홀수입니다","<br>");
+                    sum2=sum2+dan;
+                }
+                document.write("홀수의 누적 합 : "+sum2,"<br>");
+            }
+            document.write("<hr>");
+
+        }
+        document.write("짝수의 합 : "+sum1,"<br>");
+        document.write("홀수의 합 : "+sum2,"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

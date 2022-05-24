@@ -6,18 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-
-        // 2중 반복문 머리아프다 전에 해밧는 대 미치겟다
-        var i = 1; var dan = 2 ;
-        while(dan<=9) {
-            i = 1;
-            while(i<=9) {
+        // 초기값, 조건값, 증가값
+        for(var dan=2; dan<=9; dan++) { // 외부 for문
+            for(var i=1; i<=9; i++) { // 내부 for문
                 document.write(dan+"X"+i+"="+dan*i,"<br>");
-                i++;
-                // 요기서 i값이 마무리대면 처음 초기값 반복문으로 넘어간다
             }
             document.write("<hr>");
-            dan++;
         }
     </script>
 </head>
