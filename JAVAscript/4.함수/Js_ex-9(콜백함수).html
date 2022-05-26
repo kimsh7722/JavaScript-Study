@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 콜백함수
+        // callback function
+        // 1.다른함수의 인자로서 이용되는 함수(다른함수의 입력으로 들어가는 함수)
+        // 2.어떤이벤트에 의해 호출되는 함수(뭘하고 나서 실행하는 함수)
+        function myFunc() {
+            console.log("myFunc!");
+
+        }
+        // myFunc함수는 setTimeout함수의 인자로서 이용되며 입력으로 들어간다
+        // myFunc함수가 콜백함수이다
+        setTimeout(myFunc,3000)
+        // 3000ms : 3초뒤에 myFunc함수를 한번 실행한다.
+
+        // setInterval(myFunc,2000)
+        // 2초마다 myFunc함수를 실행한다
+        // 다른함수의 인자로서 이용되는 함수가 콜백함수다, myFunc->콜백함수
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

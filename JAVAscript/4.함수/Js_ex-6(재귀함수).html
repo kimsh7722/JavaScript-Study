@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 재귀함수
+        // 재귀 - 다시 돌아온다
+        // recursive - 재귀적인
+        // recursive function
+        // 자기 자신 함수 정의안에, 자기자신 호출이 있다
+        function recursive() {
+             
+            console.log('recursive call');
+            // ↓
+            recursive() // ↑
+            // 계속 안에서 호출신호를 부르며 이걸 무한재귀함수라고 한다
+        }
+        recursive();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
