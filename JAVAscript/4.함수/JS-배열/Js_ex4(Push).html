@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var arr = new Array(0);
+        // arr.push(10) // push : 늘리다
+        // 배열 길이가 1늘어나면서 0번째 위치에 10을 넣겠다
+        // 예) arr[0]=0 -> arr[0]=10
+        // arr.push(20)
+        // 배열 길이가 1늘어나면서 1번째 위치에 20을 넣겠다
+        // arr.push(30)
+        // 배열 길이가 1늘어나면서 2번째 위치에 30을 넣겠다
+        // arr.push(40)
+        // 배열 길이가 1늘어나면서 3번째 위치에 40을 넣겠다
+        // console.log(arr)
+
+    // 연습문제]
+    var score_arr = new Array(0); // 과목 점수 들어갈 배열
+    var subject_arr = new Array(0) // 과목 이름 들어갈 배열
+    var score_input=0; // 0 <- 숫자변환 변수
+    var subject_input=""; // "" <- 문자변환 변수
+    var sum=0; var avg=0;
+    var num = prompt("과목 몇개 입력할것인가?");
+    num = parseInt(num);
+    
+    // 과목 이름 들어갈 배열
+    for(var i=1; i<=num; i++) {
+        subject_input=prompt(i+"과목 이름");
+        subject_arr.push(subject_input);
+    }
+    // console.log(subject_arr);
+    
+    // 과목명이 들어가는 배열 : 과목갯구 만큼
+    // 점수 들어가는 배열 : 과목갯수+2
+
+    // 과목 점수 들어갈 배열
+    for(var i=1; i<=num; i++) {
+        var temp = subject_arr[i]
+        score_input=prompt(temp+"점수입력");
+        score_input=parseInt(score_input);
+        score_arr.push(score_input);
+        sum = sum+score_input;
+    }
+    avg = sum/num;
+    score_arr.push(sum); // score_arr[?] 배열에 넣다
+    score_arr.push(avg); // score_arr[?] 배열에 넣다
+    console.log(subject_arr);
+    console.log(score_arr);
+    document.write();
+    // document.write("총합계"+sum+"<br>"+"총평균"+avg+"<br>");
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=new Array(0) // 배열 생성
+        var element = new Array(0) // 배열안의 원소 생성
+        var num=10; // 원소
+        
+        var row=prompt("행 길이 입력")
+        var column=prompt("열 길이 입력")
+        row=parseInt(row);
+        column=parseInt(column);
+        
+        for(var i=1; i<=row; i++) {
+            element=new Array(0) // 행의 원소를 넣는 다
+
+            for(var j=1; j<=column; j++) {
+                element.push(num++) // [10,11,12],[13,14,15]
+            }
+            arr.push(element); // arr안에 element를 push
+            element=null; // element 초기화
+        }
+        console.log(arr)
+        /*
+            위의 내용 변환
+            var arr=[
+                [10,11,12],
+                [13,14,15]
+            ]
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
