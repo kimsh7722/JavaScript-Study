@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myFunc() {
+            alert("myFunc!")
+            document.getElementById("myDiv").innerText="hello"
+            // document객체 (변수, 함수)
+            // document객체의 내장메서드 getElementById
+            // getElementById : id로 원소를 가져온다.
+            // 특정 아이디에 해당하는 html요소에 접근하는 메서드(함수)
+            // 아이디가 myDiv인 태그에 접근해서 거기 안의 글자 "hello"
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="myDiv" style="width:100px; height:100px; background-color:aqua;">
+        my-div
+    </div>
+    <button onclick="myFunc()">클릭</button>
+</body>
+</html>

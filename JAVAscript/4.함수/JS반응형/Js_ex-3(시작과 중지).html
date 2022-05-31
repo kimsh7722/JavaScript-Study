@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num=1;
+        var Div=null;
+        var result=null;
+        function tick() {
+            Div=document.getElementById("Div");
+            Div.innerText=(num++)
+        }
+        function start() {
+            if(result==null) { // setInterval이 실행X
+                result = setInterval(tick,1000)
+                // alert(result)
+
+            }else {
+                alert("이미 실행중이다");
+            }
+
+        }
+        function pause() {
+            clearInterval(result) // clearInterval로 setInterval중지한다
+            // clearInterval의 입력으로 중지할 Interval id를 주면 된다
+            // clearInterval(1) - 첫번째 setInterval 중지하라
+            result=null // 초기상태로 돌아간다
+        }
+    </script>
+</head>
+<body>
+    <div id="Div">
+
+    </div>
+    <button onclick="start()">시작</button>
+    <button onclick="pause()">중지</button>
+</body>
+</html>

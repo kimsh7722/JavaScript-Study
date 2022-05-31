@@ -5,23 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        // 시,분,초 변환을 되게해보자 아!!
-        // var sec=0;
-        
-        // function tick() {
-        //     sec++
-        //     console.log(sec+"초");
-        // }
-        // setInterval(tick,1000);
+    <style>
+    
+    </style>
 
-        var time = 0;
-        var min = 0;
-        var sec = 0;
-        var timeFormat=""; // 문자형 시간표시
+    <script>
+        var sec=0;
+        var timeFormat="";
+        var min=0;
+        var time=0;
+        
         function tick() {
-            
-            time++
+            time++;
             if(time>=60) {
                 min=time/60;
                 min=parseInt(min);
@@ -31,7 +26,7 @@
                 }
 
                 sec=time%60
-                
+
                 if(sec<10) {
                     sec="0"+sec
                 }
@@ -40,13 +35,19 @@
             }else {
                 timeFormat=time;
             }
-           console.log(timeFormat);
-        }
-        setInterval(tick,200);
 
+            document.getElementById("time-display").innerText=timeFormat;
+        }
+        function start() {
+            setInterval(tick,1000)
+            alert("타이머시작!");
+        }
     </script>
 </head>
 <body>
-    
+    <div id="time-display" style="width:100px; height:100px; background-color:aqua;">
+        타이머
+    </div>
+    <button onclick="start()">시작</button>
 </body>
 </html>
