@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var audio=new Audio() // 오디오 객체 생성 
+        
+        var playList=[
+            "./audio/my_piano1.mp3",
+            "./audio/my_piano2.mp3",
+            "./audio/my_piano3.mp3"
+        ]
+        var index=0;        
+        audio.src=playList[index]
+        // 오디오 객체의 src속성값이 플레이할 음악 경로
+        
+        function playMusic() {
+            audio.play(); // 재생
+        }
+
+        function pauseMusic() {
+            audio.pause() // 일시정지
+        }
+
+        function stopMusic() {
+            audio.pause() // 잠깐 멈춘다
+            audio.currentTime=0; // 음악 시간을 0으로
+        }
+
+        function nextMusic() { // 다음
+            stopMusic()
+            index++
+
+            /*
+                배열 길이가 3이고 0,1,2
+                배열 인덱스가 2보다 커지면 안된다.
+            */
+            if(index>2) {
+                // 변수가 배열이면 조건수도 배열기준에 맞춘다
+                index=0;
+            }
+            audio.src=playList[index]
+            audio.play()
+        }
+    </script>
+</head>
+<body>
+    <button onclick="playMusic()">재생</button>
+    <button onclick="pauseMusic()">일시정지</button>
+    <button onclick="stopMusic()">끄기</button>
+    <button onclick="nextMusic()">다음</button>
+</body>
+</html>

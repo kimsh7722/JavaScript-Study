@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function rcs(user_choice) { // 매개변수 user_choice
+            alert(user_choice) // 가위,바위,보
+            var com_choice=Math.ceil(Math.random()*3) // 1 ~ 3
+
+            if(com_choice==1) {
+                com_choice='가위'
+            }else if(com_choice==2) {
+                com_choice='바위'
+            }else if(com_choice==3) {
+                com_choice='보'
+            }
+            alert("컴퓨터:"+com_choice)
+
+            if(user_choice==com_choice) {
+                alert("비겼다!")
+            }else {
+                if(user_choice=='가위') {
+                    if(com_choice=='바위') {
+                        alert('컴퓨터 승리!')
+                    }else if(user_choice=='바위') {
+                        alert('유저승리')
+                    }
+                }else if(user_choice=='바위') {
+                    if(com_choice=='보') {
+                        alert('컴퓨터 승리!')
+                    }else if(user_choice=='가위') {
+                        alert('유저승리')
+                    }
+                }else if(user_choice=='보') {
+                    if(com_choice=='가위') {
+                        alert('컴퓨터 승리!')
+                    }else if(user_choice=='바위') {
+                        alert('유저승리')
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="rcs('가위')">가위</button>
+    <button onclick="rcs('바위')">바위</button>
+    <button onclick="rcs('보')">보</button>
+</body>
+</html>

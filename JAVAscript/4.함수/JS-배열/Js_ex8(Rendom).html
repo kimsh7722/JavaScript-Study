@@ -7,7 +7,7 @@
     <title>Document</title>
     <script>
         /*
-            대수의 법칙
+            대수의 법칙 - big num's law
             시행횟수가 늘어나면 이론적인 확률에 근접한다.
             주사위눈금, 보험확률, 블랙잭
             주사위 눈금 - 16.6666%
@@ -15,18 +15,29 @@
             주사위 100만번 던지면 16.6666%가 된다 
         */
         var dice=0;
-        var dice_arr=[0,0,0,0,0,0,0,0,0]
+        var dice_per_arr=[];
+        var dice_arr=[0,0,0,0,0,0,0,0,0,0]
         var num=prompt("주사위 눈금 횟수");
         num=parseInt(num);
-        for(var i=0; i<=num; i++) {
+        for(var i=1; i<=num; i++) {
             dice=Math.ceil(Math.random()*9); // 0~1(0과 1은 미포함)
             // 0.0....1~0.999999 Math.random()
             // 0.0....3~2.999999 Math.random()*3
             // 1~3 Math.ceil(Math.random()*3) : 올림함수사용시
             dice_arr[dice]++;
         }
-        for(var i=0; i<=9; i++) {
+        for(var i=1; i<=9; i++) {
+            dice_per_arr[i]=(dice_arr[i]/num)*100;
+                            //  총횟수    입력값
+        }
+        for(var i=1; i<=9; i++) {
             document.write(i+"이 나온 횟수 : "+dice_arr[i],"<br>");
+        }
+        document.write("<br>");
+
+        for(var i=1; i<=9; i++) {
+            document.write(i+"확률 : "+(dice_per_arr[i].toFixed(3))+"%","<br>");
+            // toFixed : 소수점을 제안한다
         }
     </script>
 </head>
